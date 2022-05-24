@@ -1,0 +1,15 @@
+{
+    "Login": {
+        "account": "",
+        "password": "",
+        "default_page_after_login": "https://hss-is.com/Izbornik.aspx"
+    },
+
+    "Firefox": {
+        "gecko_path": ""
+    },
+
+    "HTMLSaveLocation": {
+        "path": ""
+    }
+}

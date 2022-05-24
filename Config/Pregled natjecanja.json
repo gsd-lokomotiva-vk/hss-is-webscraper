@@ -1,0 +1,23 @@
+{
+    "Headers" : {
+        "Početna": 0,
+        "Naziv": 1,
+        "Program": 1,
+        "Mjesto": 1,
+        "Datum prikazivanja": 1,
+        "Početak": 1,
+        "Kraj": 1,
+        "Prijave od": 1,
+        "Prijave do": 1,
+        "Organizator": 1,
+        "Akcija": 0
+    },
+
+    "webpage": "https://hss-is.com/maticniPodaci/Natjecanje/PregledNatjecanje.aspx",
+
+    "nextPage": "?stranica=",
+
+    "path": "",
+
+    "filename": "Pregled natjecanja"
+}

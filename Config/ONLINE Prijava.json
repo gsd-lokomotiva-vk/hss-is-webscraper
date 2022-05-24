@@ -1,0 +1,22 @@
+{
+    "Headers": {
+        "''": 1,
+        "Prijave od": 1,
+        "Prijave do": 1,
+        "Naziv": 1,
+        "Program": 1,
+        "Mjesto": 1,
+        "Početak": 1,
+        "Kraj": 1,
+        "Organizator": 1,
+        "Akcija": 0
+    },
+
+    "webpage": "https://hss-is.com/maticniPodaci/Natjecanje/ONLINEPrijava/PregledONLINEPrijava.aspx",
+
+    "nextPage": "?stranica=",
+
+    "path": "",
+
+    "filename": "ONLINE Prijava"
+}
