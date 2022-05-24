@@ -28,20 +28,25 @@ def append_rows_to_existing_workbook(filename: str, filepath: str, rows = List[L
 
 
 def export_to_excel_workbook(sheet_name: str, data: List[List], filepath: str, filename: str, headers: List = None):
-    if headers is not None:
-        if not check_correct_header_count(data[0], headers):
-            return -1
-    wb = Workbook()
-    ws = wb.active
-    extension = ".xlsx"
-    ws.title = sheet_name
+    file = Path(filepath + filename + workbook_extension)
+    if file.is_file():
+        wb = load_workbook(filepath + filename + workbook_extension)
+        wb.create_sheet(sheet_name)
+        ws = wb[sheet_name]
+    else:
+        wb = Workbook()
+        ws = wb.active
+        ws.title = sheet_name
 
     row = 1
     column = 1
 
-    for header in headers:
-        ws.cell(row=row, column=column, value=header)
-        column += 1
+    if headers is not None:
+        if not check_correct_header_count(data[0], headers):
+            return -1
+        for header in headers:
+            ws.cell(row=row, column=column, value=header)
+            column += 1
     
     row += 1
     column = 1
@@ -53,7 +58,7 @@ def export_to_excel_workbook(sheet_name: str, data: List[List], filepath: str, f
         row += 1
         column = 1
     
-    wb.save(filepath + filename + extension)
+    wb.save(filepath + filename + workbook_extension)
     
     
 def check_correct_header_count(row_data: List, headers: List):
